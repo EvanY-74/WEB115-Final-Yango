@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
-    
+    <section>
+        <h1>Tasks</h1> 
+        <form>
+            <label for="name">Task name</label>
+            <input type="text" name="name" id="name" required>
+            <br>
+            <label for="priority">Priority</label>
+            <select name="priority" id="priority">
+                <option value="low">low</option>
+                <option value="medium">medium</option>
+                <option value="high">high</option>
+            </select>
+            <br>
+            <label for="importance">Important</label>
+            <input type="checkbox" name="importance" id="importance">
+            <br>
+            <input type="submit" id="submit" value="Add task">
+        </form>
+    </section>
+    <hr>
+    <div id="tasksmanager"></div>
 </body>
 </html>
