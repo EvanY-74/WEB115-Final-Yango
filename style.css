@@ -1,4 +1,4 @@
-body * {
+body * { /* change every font to this */
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -6,6 +6,8 @@ h1 {
     text-align: center;
     font-size: 3em;
 }
+
+/* form */
 
 form {
     margin: 0 10%;
@@ -21,11 +23,13 @@ form #submit {
     margin: 0.5em 0;
     font-size: 1.5em;
     padding: 0.75em; 
-    background-color: #20f033;
-    border: 3px solid #9f9f9f;
+    /* background-color: #1670f0; */
+    background: linear-gradient(145deg, #1670f0, #0950d8);
+    border: 2px solid #141414;
     border-radius: 1em;
 }
 
+/* tasksmanager */
 
 #tasksmanager {
     display: flex;
@@ -37,13 +41,46 @@ form #submit {
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    outline: 2px solid #141414;
+    padding: 1em 0;
+    margin-top: 1em;
+}
+
+#tasksmanager .done-container label {
+    padding: 0.25em;
+}
+
+#tasksmanager div button { /* delete button */
+    padding: 1em;
+    border-radius: 2em;
+    border-color: #f01010;
+}    
+
+/* conditional styles */
+
+.low, .medium, .high {
+    padding: 0.5em;
+    border-radius: 0.5em;
+    width: 4em;
+    text-align: center;
+}
+.low {
+    /* background-color: #f010104a; */
+    background-color: #feff37;
+}
+.medium {
+    /* background-color: #e0a0104a; */
+    background-color: #ffc854;
+}
+.high {
+    background-color: #ffbbbb;
 }
 
 .important {
     background-color: #fe020288;
 }
 
-.completed {
-    background-color: green; /* TODO: change this style to strikethrough */
+.completed *:not(button) /* <-- prevents delete button from having strike-though */ {
+    text-decoration: line-through;
 }
